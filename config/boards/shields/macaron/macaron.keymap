@@ -1,0 +1,19 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/{
+    keymap {
+        compatible = "zmk,keymap";
+
+        toolbox_layer {
+            bindings = <
+                &none           &none           &none
+                &kp UP_ARROW    &none           &kp DOWN_ARROW
+                &none           &none           &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
+        };
+    };
+};
